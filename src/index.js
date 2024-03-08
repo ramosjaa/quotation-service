@@ -27,10 +27,10 @@ app.get("/image", async (req, res) => {
     req.pipe(forwardRequest);
 });
 
-app.get("/quotation", async (req, res) => {
-    let quotation = await selectAQuotation();
-    res.status(200).json(quotation);
-});
+// app.get("/quotation", async (req, res) => {
+//     let quotation = await selectAQuotation();
+//     res.status(200).json(quotation);
+// });
 
 app.listen(PORT, () => {
     console.log(`Quotation service is up and listening to port ${PORT}`);
